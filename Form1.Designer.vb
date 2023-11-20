@@ -37,6 +37,12 @@ Partial Class Form1
         DiceHistory = New ListBox()
         DiceNumeric = New NumericUpDown()
         Label1 = New Label()
+        FizikselListBox = New ListBox()
+        FizikselÖzellik = New Button()
+        KişiselListBox = New ListBox()
+        KişiselÖzellik = New Button()
+        CheckedListBox1 = New CheckedListBox()
+        Splitter2 = New Splitter()
         CType(DiceNumeric, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -97,7 +103,7 @@ Partial Class Form1
         ' Splitter1
         ' 
         resources.ApplyResources(Splitter1, "Splitter1")
-        Splitter1.BackColor = SystemColors.ControlDark
+        Splitter1.BackColor = SystemColors.ControlDarkDark
         Splitter1.BorderStyle = BorderStyle.FixedSingle
         Splitter1.Name = "Splitter1"
         Splitter1.TabStop = False
@@ -125,10 +131,53 @@ Partial Class Form1
         resources.ApplyResources(Label1, "Label1")
         Label1.Name = "Label1"
         ' 
+        ' FizikselListBox
+        ' 
+        resources.ApplyResources(FizikselListBox, "FizikselListBox")
+        FizikselListBox.FormattingEnabled = True
+        FizikselListBox.Name = "FizikselListBox"
+        ' 
+        ' FizikselÖzellik
+        ' 
+        resources.ApplyResources(FizikselÖzellik, "FizikselÖzellik")
+        FizikselÖzellik.Name = "FizikselÖzellik"
+        FizikselÖzellik.UseVisualStyleBackColor = True
+        ' 
+        ' KişiselListBox
+        ' 
+        resources.ApplyResources(KişiselListBox, "KişiselListBox")
+        KişiselListBox.FormattingEnabled = True
+        KişiselListBox.Name = "KişiselListBox"
+        ' 
+        ' KişiselÖzellik
+        ' 
+        resources.ApplyResources(KişiselÖzellik, "KişiselÖzellik")
+        KişiselÖzellik.Name = "KişiselÖzellik"
+        KişiselÖzellik.UseVisualStyleBackColor = True
+        ' 
+        ' CheckedListBox1
+        ' 
+        resources.ApplyResources(CheckedListBox1, "CheckedListBox1")
+        CheckedListBox1.FormattingEnabled = True
+        CheckedListBox1.Name = "CheckedListBox1"
+        CheckedListBox1.Tag = ""
+        ' 
+        ' Splitter2
+        ' 
+        resources.ApplyResources(Splitter2, "Splitter2")
+        Splitter2.BackColor = SystemColors.ControlDark
+        Splitter2.Name = "Splitter2"
+        Splitter2.TabStop = False
+        ' 
         ' Form1
         ' 
         resources.ApplyResources(Me, "$this")
         AutoScaleMode = AutoScaleMode.Font
+        Controls.Add(CheckedListBox1)
+        Controls.Add(FizikselListBox)
+        Controls.Add(KişiselÖzellik)
+        Controls.Add(KişiselListBox)
+        Controls.Add(FizikselÖzellik)
         Controls.Add(Label1)
         Controls.Add(DiceNumeric)
         Controls.Add(DiceHistory)
@@ -141,6 +190,7 @@ Partial Class Form1
         Controls.Add(AgeBox1)
         Controls.Add(CharName)
         Controls.Add(ButtonSave)
+        Controls.Add(Splitter2)
         Controls.Add(Splitter1)
         Name = "Form1"
         CType(DiceNumeric, ComponentModel.ISupportInitialize).EndInit()
@@ -162,4 +212,10 @@ Partial Class Form1
     Friend WithEvents DiceHistory As ListBox
     Friend WithEvents DiceNumeric As NumericUpDown
     Friend WithEvents Label1 As Label
+    Friend WithEvents FizikselListBox As ListBox
+    Friend WithEvents FizikselÖzellik As Button
+    Friend WithEvents KişiselListBox As ListBox
+    Friend WithEvents KişiselÖzellik As Button
+    Friend WithEvents CheckedListBox1 As CheckedListBox
+    Friend WithEvents Splitter2 As Splitter
 End Class

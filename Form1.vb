@@ -1,30 +1,27 @@
 ﻿Public Class Form1
     Private Sub Button_Save(sender As Object, e As EventArgs) Handles ButtonSave.Click
 
-        Dim Ad As String = CharName.Text
-        Dim Yaş As String = AgeBox1.Text
-        Dim Line As String = "****************************************************"
-        Dim Hikaye As String = StoryBox1.Text
-        Dim Cinsiyet As String = GenderBox1.SelectedItem
-        Dim Sınıf As String = ClassBox.SelectedItem
+        Dim space As string = Environment.NewLine
+        Dim FizikselÖzellik_metin As String = String.Join(", ", FizikselListBox.Items.OfType(Of Object)().Select(Function(item) item.ToString()))
+        Dim KişiselÖzellik_metin As String = String.Join(", ", KişiselListBox.Items.OfType(Of Object)().Select(Function(item) item.ToString()))
 
         Dim saveFileDialog1 As New SaveFileDialog With {
             .FileName = "MetinDosyasi",
-            .Filter = "Metin Dosyaları|*.rtf|Tüm Dosyalar|*.*"
+            .Filter = "Metin Dosyaları|*.txt|Tüm Dosyalar|*.*"
         }
         If saveFileDialog1.ShowDialog() = DialogResult.OK Then
             Dim dosyaYolu As String = saveFileDialog1.FileName
 
-            ' Dosyayı yazma modunda aç
             Dim dosya As System.IO.StreamWriter
             dosya = My.Computer.FileSystem.OpenTextFileWriter(dosyaYolu, True, System.Text.Encoding.UTF8)
 
-            ' Metni dosyaya yaz
-            dosya.WriteLine(Ad & ", " & Yaş & " yaşında " & Sınıf & " bir " & Cinsiyet & "." _
-                            & Environment.NewLine & Line & Environment.NewLine &
-                            "GÖRÜNÜŞÜ:" _
-                            & Environment.NewLine & Line & Environment.NewLine &
-                            "HIKAYESI: " & Hikaye)
+            dosya.WriteLine("ISIM: " & CharName.Text & space &
+                            "YAS: " & AgeBox1.Text & space &
+                            "CINSIYET: " & GenderBox1.SelectedItem & space &
+                            "SINIF: " & ClassBox.SelectedItem & space &
+                            "FIZIKSEL ÖZELLIKLERI: " & FizikselÖzellik_metin & space &
+                            "KISISEL ÖZELLIKLERI: " & KişiselÖzellik_metin & space &
+                            "HIKAYESI: " & StoryBox1.Text & space)
 
             ' Dosyayı kapat
             dosya.Close()
@@ -70,4 +67,29 @@
         DiceResult.Text = "Zar: ___"
     End Sub
 
+    Private Sub FizikselÖzellik_Click(sender As Object, e As EventArgs) Handles FizikselÖzellik.Click
+        Dim f_özellik As String = InputBox("Bir fiziksel özellik giriniz.", "Özellik Giriş")
+        If f_özellik IsNot "" Then
+            FizikselListBox.Items.Add(f_özellik)
+        End If
+    End Sub
+
+    Private Sub KişiselÖzellik_Click(sender As Object, e As EventArgs) Handles KişiselÖzellik.Click
+        Dim k_özellik As String = InputBox("Bir kişisel özellik giriniz.", "Özellik Giriş")
+        If k_özellik IsNot "" Then
+            KişiselListBox.Items.Add(k_özellik)
+        End If
+    End Sub
+
+    Private Sub FizikselListBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles FizikselListBox.SelectedIndexChanged
+        If FizikselListBox.SelectedIndex <> -1 AndAlso FizikselListBox.SelectedIndex < FizikselListBox.Items.Count Then
+            FizikselListBox.Items.RemoveAt(FizikselListBox.SelectedIndex)
+        End If
+    End Sub
+
+    Private Sub KişiselListBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles KişiselListBox.SelectedIndexChanged
+        If KişiselListBox.SelectedIndex <> -1 AndAlso KişiselListBox.SelectedIndex < KişiselListBox.Items.Count Then
+            KişiselListBox.Items.RemoveAt(KişiselListBox.SelectedIndex)
+        End If
+    End Sub
 End Class
