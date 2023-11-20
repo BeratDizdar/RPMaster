@@ -10,17 +10,19 @@
 
         Dim saveFileDialog1 As New SaveFileDialog With {
             .FileName = "MetinDosyasi",
-            .Filter = "Metin Dosyaları|*.txt|Tüm Dosyalar|*.*"
+            .Filter = "Metin Dosyaları|*.rtf|Tüm Dosyalar|*.*"
         }
         If saveFileDialog1.ShowDialog() = DialogResult.OK Then
             Dim dosyaYolu As String = saveFileDialog1.FileName
 
             ' Dosyayı yazma modunda aç
             Dim dosya As System.IO.StreamWriter
-            dosya = My.Computer.FileSystem.OpenTextFileWriter(dosyaYolu, True)
+            dosya = My.Computer.FileSystem.OpenTextFileWriter(dosyaYolu, True, System.Text.Encoding.UTF8)
 
             ' Metni dosyaya yaz
             dosya.WriteLine(Ad & ", " & Yaş & " yaşında " & Sınıf & " bir " & Cinsiyet & "." _
+                            & Environment.NewLine & Line & Environment.NewLine &
+                            "GÖRÜNÜŞÜ:" _
                             & Environment.NewLine & Line & Environment.NewLine &
                             "HIKAYESI: " & Hikaye)
 
