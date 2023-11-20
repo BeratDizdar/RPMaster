@@ -118,11 +118,29 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="DiceButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>343, 86</value>
+  </data>
+  <data name="DiceButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 30</value>
+  </data>
+  <data name="DiceButton.Text" xml:space="preserve">
+    <value>Zar At</value>
+  </data>
   <data name="ButtonSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 327</value>
+    <value>121, 327</value>
+  </data>
+  <data name="ButtonSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 56</value>
+  </data>
+  <data name="ButtonSave.Text" xml:space="preserve">
+    <value>Karakter Olarak Kaydet</value>
   </data>
   <data name="CharName.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 27</value>
+  </data>
+  <data name="AgeBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>188, 12</value>
   </data>
   <data name="AgeBox1.PlaceholderText" xml:space="preserve">
     <value>Yaş</value>
@@ -130,15 +148,8 @@
   <data name="AgeBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 27</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="StoryBox1.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="StoryBox1.PlaceholderText" xml:space="preserve">
-    <value>Karakter Hikayesi</value>
-  </data>
-  <data name="StoryBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 242</value>
+  <data name="GenderBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>130, 45</value>
   </data>
   <data name="GenderBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 28</value>
@@ -151,6 +162,82 @@
   </data>
   <data name="ClassBox.Text" xml:space="preserve">
     <value>Class</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="StoryBox1.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="StoryBox1.PlaceholderText" xml:space="preserve">
+    <value>Karakter Hikayesi</value>
+  </data>
+  <data name="StoryBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 242</value>
+  </data>
+  <data name="DiceBox.Items1" xml:space="preserve">
+    <value>d8</value>
+  </data>
+  <data name="DiceBox.Items2" xml:space="preserve">
+    <value>d10</value>
+  </data>
+  <data name="DiceBox.Items3" xml:space="preserve">
+    <value>d12</value>
+  </data>
+  <data name="DiceBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 28</value>
+  </data>
+  <data name="DiceBox.Text" xml:space="preserve">
+    <value>Zarlar</value>
+  </data>
+  <data name="Splitter1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="Splitter1.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>270, 395</value>
+  </data>
+  <data name="Splitter1.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>270, 395</value>
+  </data>
+  <data name="Splitter1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 395</value>
+  </data>
+  <data name="Splitter1.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="DiceResult.Location" type="System.Drawing.Point, System.Drawing">
+    <value>343, 53</value>
+  </data>
+  <data name="DiceResult.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 30</value>
+  </data>
+  <data name="DiceResult.Text" xml:space="preserve">
+    <value>Zar: ___</value>
+  </data>
+  <data name="DiceHistory.ItemHeight" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="DiceHistory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>498, 12</value>
+  </data>
+  <data name="DiceHistory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 104</value>
+  </data>
+  <data name="DiceNumeric.Location" type="System.Drawing.Point, System.Drawing">
+    <value>438, 12</value>
+  </data>
+  <data name="DiceNumeric.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 27</value>
+  </data>
+  <data name="DiceNumeric.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>349, 15</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 27</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>+ Modifier</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>633, 395</value>
@@ -236,6 +323,6 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>RPM</value>
+    <value>RPMaster</value>
   </data>
 </root>

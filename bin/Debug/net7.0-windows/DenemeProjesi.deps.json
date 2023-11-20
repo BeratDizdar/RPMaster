@@ -9,6 +9,11 @@
       "DenemeProjesi/1.0.0": {
         "runtime": {
           "DenemeProjesi.dll": {}
+        },
+        "resources": {
+          "tr-TR/DenemeProjesi.resources.dll": {
+            "locale": "tr-TR"
+          }
         }
       }
     }

@@ -38,4 +38,34 @@
         End If
     End Sub
 
+    Private Sub DiceButton_Click(sender As Object, e As EventArgs) Handles DiceButton.Click
+
+        Dim rand = New Random()
+        Dim zarNum As Integer
+
+        Select Case DiceBox.SelectedItem
+            Case "d6"
+                zarNum = rand.Next(1, 6)
+            Case "d8"
+                zarNum = rand.Next(1, 8)
+            Case "d10"
+                zarNum = rand.Next(1, 10)
+            Case "d12"
+                zarNum = rand.Next(1, 12)
+            Case "d20"
+                zarNum = rand.Next(1, 20)
+            Case Else
+                MessageBox.Show("Bir Zar Seçmediniz!", "Dikkat",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+        End Select
+        zarNum = zarNum + DiceNumeric.Value
+        DiceResult.Text = "Zar: " & zarNum
+        DiceHistory.Items.Add(zarNum)
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        DiceResult.Text = "Zar: ___"
+    End Sub
+
 End Class

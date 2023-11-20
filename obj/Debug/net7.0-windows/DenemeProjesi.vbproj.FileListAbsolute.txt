@@ -17,3 +17,4 @@ C:\Users\berat\OneDrive\Masaüstü\YazılımOlayı\VBProjects\DenemeProjesi\obj\
 C:\Users\berat\OneDrive\Masaüstü\YazılımOlayı\VBProjects\DenemeProjesi\bin\Debug\net7.0-windows\tr-TR\DenemeProjesi.resources.dll
 C:\Users\berat\OneDrive\Masaüstü\YazılımOlayı\VBProjects\DenemeProjesi\obj\Debug\net7.0-windows\DenemeProjesi.Form1.tr-TR.resources
 C:\Users\berat\OneDrive\Masaüstü\YazılımOlayı\VBProjects\DenemeProjesi\obj\Debug\net7.0-windows\tr-TR\DenemeProjesi.resources.dll
+C:\Users\berat\OneDrive\Masaüstü\YazılımOlayı\VBProjects\DenemeProjesi\obj\Debug\net7.0-windows\DenemeProjesi.Resources.resources
